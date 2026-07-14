@@ -43,16 +43,17 @@ export function QuranSection() {
           </Heading>
 
           <p className="font-arabic mt-12 text-4xl leading-loose md:text-5xl">
-            لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا
+وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
           </p>
 
           <Paragraph className="mt-12 text-lg leading-9">
-            "Janganlah engkau bersedih,
-            sesungguhnya Allah bersama kita."
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
+             agar kamu cenderung dan merasa tenteram kepadanya. Dia menjadikan di antaramu rasa kasih dan sayang. 
+             Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
           </Paragraph>
 
           <Paragraph className="mt-6 text-secondary font-semibold">
-            QS. At-Taubah : 40
+            QS. Ar-Rum : 21
           </Paragraph>
         </motion.div>
       </Container>
