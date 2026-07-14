@@ -11,19 +11,19 @@ import {
 
 const stories = [
   {
-    year: "2021",
+    year: "2025",
     title: "First Meeting",
     description:
       "The beginning of a beautiful journey where two paths crossed for the first time.",
   },
   {
-    year: "2023",
+    year: "2025",
     title: "Growing Together",
     description:
       "Through countless moments, our friendship grew into love, strengthening our commitment to one another.",
   },
   {
-    year: "2025",
+    year: "2026",
     title: "Engagement",
     description:
       "With the blessing of our families, we promised to walk together toward marriage.",

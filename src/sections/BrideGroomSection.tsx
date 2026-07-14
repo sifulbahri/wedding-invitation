@@ -62,11 +62,11 @@ export function BrideGroomSection() {
               </Paragraph>
 
               <Paragraph>
-                Mr. Father's Name
+                Mr. SUPRIYADI
               </Paragraph>
 
               <Paragraph>
-                & Mrs. Mother's Name
+                & Mrs. RUMI
               </Paragraph>
 
               <a
@@ -103,11 +103,11 @@ export function BrideGroomSection() {
               </Paragraph>
 
               <Paragraph>
-                Mr. Father's Name
+                Mr. MUCHSIN AMIR HASAN AZZI
               </Paragraph>
 
               <Paragraph>
-                & Mrs. Mother's Name
+                & Mrs. IIS ASIKAH
               </Paragraph>
 
               <a
