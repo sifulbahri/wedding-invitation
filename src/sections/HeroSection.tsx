@@ -81,38 +81,6 @@ export function HeroSection() {
               )}
           </Paragraph>
         </motion.div>
-
-        <motion.button
-          type="button"
-          onClick={scrollToNext}
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            delay: 1.2,
-          }}
-          className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center text-secondary"
-          aria-label="Scroll to next section"
-        >
-          <span className="mb-2 text-xs uppercase tracking-[0.3em]">
-            Scroll
-          </span>
-
-          <motion.div
-            animate={{
-              y: [0, 10, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-            }}
-          >
-            <ChevronDown size={28} />
-          </motion.div>
-        </motion.button>
       </Container>
     </Section>
   );
