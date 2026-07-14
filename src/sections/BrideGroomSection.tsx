@@ -17,15 +17,99 @@ export function BrideGroomSection() {
   return (
     <Section
       id="bride-groom"
-        className="
+      className="
         relative
         overflow-hidden
-        bg-[#0B0B0B]
-        bg-[radial-gradient(circle_at_top,#34131e_0%,#111111_45%,#070707_100%)]
-        "
-    >
+        bg-[#080808]
+        py-32
+        isolate
+    ">
 
-        <div className="absolute inset-0 opacity-10 bg-[url('/wedding-invitation/ornaments/noise.png')]" />
+        <div
+        className="
+        absolute
+        top-0
+        left-1/2
+        h-[700px]
+        w-[700px]
+        -translate-x-1/2
+        rounded-full
+        bg-[#D4AF37]
+        opacity-[0.05]
+        blur-[220px]
+        pointer-events-none
+        "
+        />
+
+        <div
+        className="
+        absolute
+        bottom-0
+        left-0
+        h-[500px]
+        w-[500px]
+        rounded-full
+        bg-[#7B1836]
+        opacity-30
+        blur-[200px]
+        "
+        />
+
+        <div
+        className="
+        absolute
+        right-0
+        top-0
+        h-[500px]
+        w-[500px]
+        rounded-full
+        bg-[#D4AF37]
+        opacity-10
+        blur-[180px]
+        "
+        />
+
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+
+        {Array.from({ length: 60 }).map((_, i) => (
+
+        <div
+        key={i}
+        className="
+        absolute
+        rounded-full
+        bg-yellow-300/30
+        animate-pulse
+        "
+        style={{
+        width:`${Math.random()*3+1}px`,
+        height:`${Math.random()*3+1}px`,
+        left:`${Math.random()*100}%`,
+        top:`${Math.random()*100}%`,
+        animationDuration:`${5+Math.random()*8}s`
+        }}
+        />
+
+        ))}
+
+        </div>
+
+              <div
+                className="
+                  absolute
+                  inset-0
+                  bg-cover
+                  bg-center
+                  bg-no-repeat
+                  opacity-90
+                  -z-20
+                "
+                style={{
+                  backgroundImage:
+                    "url('/wedding-invitation/ornaments/noise.png')",
+                }}
+              />
+
 
         <div className="absolute left-0 top-0 h-80 w-80 bg-yellow-500 blur-[180px] opacity-10"/>
 
@@ -39,13 +123,51 @@ export function BrideGroomSection() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-            <Paragraph className="uppercase tracking-[0.6em] text-yellow-500">
-            THE HAPPY COUPLE
-            </Paragraph>
+            <Paragraph
+                className="
+                uppercase
+                tracking-[0.6em]
+                text-[#D4AF37]
+                font-medium
+                text-xs
+                "
+                >
+                THE HAPPY COUPLE
+                </Paragraph>
 
-            <Heading className="mt-6 text-6xl font-serif text-white">
-            Bride <span className="text-yellow-500">&</span> Groom
+            <div className="mt-5">
+
+            <Heading
+            className="
+            font-cormorant
+            text-6xl
+            text-white
+            "
+            >
+            Bride{" "}
+            <span className="text-[#D4AF37]">
+            &
+            </span>{" "}
+            Groom
             </Heading>
+
+            </div>
+
+            <div className="flex justify-center mt-5">
+
+            <div className="h-px w-32 bg-[#D4AF37]/40"/>
+
+            </div>
+
+            <div className="mt-6">
+
+            <Heart
+            size={18}
+            className="mx-auto text-[#D4AF37]"
+            fill="currentColor"
+            />
+
+            </div>
 
           <Divider />
 
@@ -57,7 +179,14 @@ export function BrideGroomSection() {
           </Paragraph>
         </motion.div>
 
-        <div className="mt-28 grid gap-20 lg:grid-cols-2">
+        <div className="mx-auto
+mt-24
+grid
+max-w-7xl
+grid-cols-1
+items-start
+gap-20
+lg:grid-cols-2">
           {/* Groom */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -70,6 +199,26 @@ export function BrideGroomSection() {
                 border-none
                 shadow-none
                 text-center
+                relative
+                overflow-visible
+                rounded-[36px]
+                bg-white/[0.03]
+                backdrop-blur-xl
+                border border-white/[0.06]
+                shadow-[0_20px_60px_rgba(0,0,0,.45)]
+                transition-all
+                duration-500
+                hover:bg-white/[0.05]
+                hover:border-[#D4AF37]/20
+                px-10
+                pt-12
+                pb-14
+                max-w-[420px]
+                mx-auto
+        flex
+        h-full
+        flex-col
+        rounded-[36px]
                 "
             >
 
@@ -78,30 +227,48 @@ export function BrideGroomSection() {
                         <img
                             src={couple.groom.photo}
                             alt={couple.groom.name}
-                            className="h-[420px] w-full rounded-t-[170px] object-cover"
+                            className="h-[420px] w-full rounded-t-[170px] object-cover flex-col intems-center"
                         />
                     </div>
                 </div>
 
-              <Heading className="
+              <Heading
+                className="
                 mt-8
                 font-[var(--font-script)]
-                text-6xl
-                text-yellow-400
+                text-3xl
+      leading-tight
+                font-normal
+                text-[#D4AF37]
+                drop-shadow-[0_0_12px_rgba(212,175,55,.25)]
                 ">
                 {couple.groom.name}
               </Heading>
 
-              <Paragraph className="mt-4">
-                Son of
-              </Paragraph>
+                <div className="mt-4 flex items-center justify-center gap-4">
 
-              <Paragraph>
-                Mr. {couple.groom.father}
-              </Paragraph>
+                <div className="h-px w-12 bg-[#D4AF37]/30"/>
 
-              <Paragraph>
-                & Mrs. {couple.groom.mother}
+                <Heart
+                size={10}
+                fill="currentColor"
+                className="text-[#D4AF37]"
+                />
+
+                <div className="h-px w-12 bg-[#D4AF37]/30"/>
+
+                </div>
+
+              <Paragraph
+                className="
+                    mt-6
+                    uppercase
+                    tracking-[0.35em]
+                    text-[11px]
+                    text-[#B18A47]
+
+              ">
+                Son of Mr. {couple.groom.father} <br /> & Mrs. {couple.groom.mother}
               </Paragraph>
 
               <a
@@ -109,19 +276,23 @@ export function BrideGroomSection() {
                 target="_blank"
                 rel="noreferrer"
                 className="
+                    group
                     mx-auto
-                    mt-8
+                    mt-auto
                     flex
-                    h-11
-                    w-11
+                    h-12
+                    w-12
                     items-center
                     justify-center
                     rounded-full
                     border
-                    border-yellow-500
-                    hover:bg-yellow-500
+                    border-[#D4AF37]/60
+                    bg-black/20
+                    transition-all
+                    hover:scale-110
+                    hover:border-[#D4AF37]
+                    hover:bg-[#D4AF37]
                     hover:text-black
-                    transition
                     "
               >
                 <Instagram size={20} />
@@ -131,46 +302,86 @@ export function BrideGroomSection() {
 
           {/* Bride */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <Card
-            className="
+            <Card 
+                className="
                 bg-transparent
                 border-none
                 shadow-none
                 text-center
-                ">
+                relative
+                overflow-visible
+                rounded-[36px]
+                bg-white/[0.03]
+                backdrop-blur-xl
+                border border-white/[0.06]
+                shadow-[0_20px_60px_rgba(0,0,0,.45)]
+                transition-all
+                duration-500
+                hover:bg-white/[0.05]
+                hover:border-[#D4AF37]/20
+                px-10
+                pt-12
+                pb-14
+                max-w-[420px]
+                mx-auto
+        flex
+        h-full
+        flex-col
+        rounded-[36px]
+                "
+            >
+
                 <div className="relative mx-auto w-[320px]">
                     <div className="overflow-hidden rounded-t-[180px] rounded-b-md border border-yellow-500 bg-[#1B1B1B] p-2 shadow-[0_0_40px_rgba(212,175,55,0.15)]">
                         <img
                             src={couple.bride.photo}
                             alt={couple.bride.name}
-                            className="h-[420px] w-full rounded-t-[170px] object-cover"
+                            className="h-[420px] w-full rounded-t-[170px] object-cover flex-col intems-center"
                         />
                     </div>
                 </div>
 
-              <Heading className="
-                    mt-8
-                    font-[var(--font-script)]
-                    text-6xl
-                    text-yellow-400
-                    ">
+              <Heading
+                className="
+                mt-8
+                font-[var(--font-script)]
+                text-3xl
+      leading-tight
+                font-normal
+                text-[#D4AF37]
+                drop-shadow-[0_0_12px_rgba(212,175,55,.25)]
+                ">
                 {couple.bride.name}
               </Heading>
 
-              <Paragraph className="mt-4">
-                Daughter of
-              </Paragraph>
+                <div className="mt-4 flex items-center justify-center gap-4">
 
-              <Paragraph>
-                Mr. {couple.bride.father}
-              </Paragraph>
+                <div className="h-px w-12 bg-[#D4AF37]/30"/>
 
-              <Paragraph>
-                & Mrs. {couple.bride.mother}
+                <Heart
+                size={10}
+                fill="currentColor"
+                className="text-[#D4AF37]"
+                />
+
+                <div className="h-px w-12 bg-[#D4AF37]/30"/>
+
+                </div>
+
+              <Paragraph
+                className="
+                    mt-6
+                    uppercase
+                    tracking-[0.35em]
+                    text-[11px]
+                    text-[#B18A47]
+
+              ">
+                Son of Mr. {couple.bride.father} <br /> & Mrs. {couple.bride.mother}
               </Paragraph>
 
               <a
@@ -178,19 +389,23 @@ export function BrideGroomSection() {
                 target="_blank"
                 rel="noreferrer"
                 className="
+                    group
                     mx-auto
-                    mt-8
+                    mt-auto
                     flex
-                    h-11
-                    w-11
+                    h-12
+                    w-12
                     items-center
                     justify-center
                     rounded-full
                     border
-                    border-yellow-500
-                    hover:bg-yellow-500
+                    border-[#D4AF37]/60
+                    bg-black/20
+                    transition-all
+                    hover:scale-110
+                    hover:border-[#D4AF37]
+                    hover:bg-[#D4AF37]
                     hover:text-black
-                    transition
                     "
               >
                 <Instagram size={20} />
