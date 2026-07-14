@@ -15,7 +15,7 @@ export function HeroTitle() {
         delay: .3,
         duration: .8,
       }}
-      className="mt-10 text-center"
+      className="mt-6 text-center"
     >
       <p
         className="
@@ -29,7 +29,7 @@ export function HeroTitle() {
         SAVE THE DATE
       </p>
 
-      <div className="mt-6 flex items-center justify-center gap-5">
+      <div className="mt-4 flex items-center justify-center gap-4">
         <div className="h-px w-20 bg-[#C9A34E]/50" />
 
         <div className="h-2 w-2 rotate-45 bg-[#C9A34E]" />

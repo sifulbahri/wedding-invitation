@@ -130,6 +130,7 @@ export function BrideGroomSection() {
                 text-[#D4AF37]
                 font-medium
                 text-xs
+margin-bottom: 18px;
                 "
                 >
                 THE HAPPY COUPLE
@@ -142,10 +143,11 @@ export function BrideGroomSection() {
             font-cormorant
             text-6xl
             text-white
+margin-bottom: 18px;
             "
             >
             Bride{" "}
-            <span className="text-[#D4AF37]">
+            <span className="text-[#D4AF37] margin-bottom: 18px;">
             &
             </span>{" "}
             Groom
@@ -153,9 +155,9 @@ export function BrideGroomSection() {
 
             </div>
 
-            <div className="flex justify-center mt-5">
+            <div className="flex justify-center mt-5 margin-bottom: 18px;">
 
-            <div className="h-px w-32 bg-[#D4AF37]/40"/>
+            <div className="h-px w-32 bg-[#D4AF37]/40 margin-bottom: 18px;"/>
 
             </div>
 
@@ -173,7 +175,9 @@ export function BrideGroomSection() {
 
           <Heading>In the Name of Allah</Heading>
 
-          <Paragraph className="mx-auto mt-8 max-w-2xl">
+          <Paragraph className="font-size: 16px;
+line-height: 32px;
+color: rgba(255,255,255,.78); mx-auto mt-8 max-w-2xl">
             Dengan penuh rasa syukur dan bahagia,
             kami ingin memperkenalkan mempelai yang akan mengikat janji suci.
           </Paragraph>
@@ -195,6 +199,9 @@ lg:grid-cols-2">
           >
             <Card 
                 className="
+background: rgba(30, 18, 18, 0.45);
+backdrop-filter: blur(20px);
+border: 1px solid rgba(255,255,255,0.05);
                 bg-transparent
                 border-none
                 shadow-none
@@ -210,10 +217,10 @@ lg:grid-cols-2">
                 duration-500
                 hover:bg-white/[0.05]
                 hover:border-[#D4AF37]/20
-                px-10
-                pt-12
-                pb-14
-                max-w-[420px]
+px-8
+pt-10
+pb-10
+                max-w-[380px]
                 mx-auto
         flex
         h-full
@@ -222,22 +229,29 @@ lg:grid-cols-2">
                 "
             >
 
-                <div className="relative mx-auto w-[320px]">
+                <div className="relative mx-auto w-[340px]">
                     <div className="overflow-hidden rounded-t-[180px] rounded-b-md border border-yellow-500 bg-[#1B1B1B] p-2 shadow-[0_0_40px_rgba(212,175,55,0.15)]">
                         <img
                             src={couple.groom.photo}
                             alt={couple.groom.name}
-                            className="h-[420px] w-full rounded-t-[170px] object-cover flex-col intems-center"
+                            className="h-[470px] w-full rounded-t-[170px] object-cover flex-col intems-center"
                         />
                     </div>
                 </div>
 
               <Heading
+styles={{    fontFamily: '"Great Vibes", cursive',
+    fontSize: '44px',
+    lineHeight: '46px',
+    color: '#d4b16d',
+    fontWeight: 400,}}
                 className="
                 mt-8
                 font-[var(--font-script)]
-                text-3xl
       leading-tight
+font-size: 44px;
+line-height: 46px;
+font-weight: 400;
                 font-normal
                 text-[#D4AF37]
                 drop-shadow-[0_0_12px_rgba(212,175,55,.25)]
@@ -247,20 +261,24 @@ lg:grid-cols-2">
 
                 <div className="mt-4 flex items-center justify-center gap-4">
 
-                <div className="h-px w-12 bg-[#D4AF37]/30"/>
+                <div className="h-px w-20 bg-[#D4AF37]/30"/>
 
                 <Heart
-                size={10}
+                size={20}
                 fill="currentColor"
                 className="text-[#D4AF37]"
                 />
 
-                <div className="h-px w-12 bg-[#D4AF37]/30"/>
+                <div className="h-px w-20 bg-[#D4AF37]/30"/>
 
                 </div>
 
               <Paragraph
                 className="
+font-size: 13px;
+letter-spacing: .08em;
+line-height: 28px;
+font-weight: 400;
                     mt-6
                     uppercase
                     tracking-[0.35em]
@@ -308,6 +326,9 @@ lg:grid-cols-2">
           >
             <Card 
                 className="
+background: rgba(30, 18, 18, 0.45);
+backdrop-filter: blur(20px);
+border: 1px solid rgba(255,255,255,0.05);
                 bg-transparent
                 border-none
                 shadow-none
@@ -323,10 +344,10 @@ lg:grid-cols-2">
                 duration-500
                 hover:bg-white/[0.05]
                 hover:border-[#D4AF37]/20
-                px-10
-                pt-12
-                pb-14
-                max-w-[420px]
+px-8
+pt-10
+pb-10
+                max-w-[380px]
                 mx-auto
         flex
         h-full
@@ -335,12 +356,12 @@ lg:grid-cols-2">
                 "
             >
 
-                <div className="relative mx-auto w-[320px]">
+                <div className="relative mx-auto w-[340px]">
                     <div className="overflow-hidden rounded-t-[180px] rounded-b-md border border-yellow-500 bg-[#1B1B1B] p-2 shadow-[0_0_40px_rgba(212,175,55,0.15)]">
                         <img
                             src={couple.bride.photo}
                             alt={couple.bride.name}
-                            className="h-[420px] w-full rounded-t-[170px] object-cover flex-col intems-center"
+                            className="h-[470px] w-full rounded-t-[170px] object-cover flex-col intems-center"
                         />
                     </div>
                 </div>
@@ -349,8 +370,11 @@ lg:grid-cols-2">
                 className="
                 mt-8
                 font-[var(--font-script)]
-                text-3xl
       leading-tight
+
+font-size: 44px;
+line-height: 46px;
+font-weight: 400;
                 font-normal
                 text-[#D4AF37]
                 drop-shadow-[0_0_12px_rgba(212,175,55,.25)]
@@ -360,15 +384,15 @@ lg:grid-cols-2">
 
                 <div className="mt-4 flex items-center justify-center gap-4">
 
-                <div className="h-px w-12 bg-[#D4AF37]/30"/>
+                <div className="h-px w-20 bg-[#D4AF37]/30"/>
 
                 <Heart
-                size={10}
+                size={20}
                 fill="currentColor"
                 className="text-[#D4AF37]"
                 />
 
-                <div className="h-px w-12 bg-[#D4AF37]/30"/>
+                <div className="h-px w-20 bg-[#D4AF37]/30"/>
 
                 </div>
 

@@ -32,12 +32,12 @@ export function HeroDateCard() {
       {/* Card */}
       <div
         className="
-        rounded-[34px]
+        rounded-[28px]
         border
         border-[#C9A34E]/70
         bg-black/40
-        px-10
-        py-12
+        px-5
+        py-2
         text-center
       "
       >
@@ -57,14 +57,14 @@ export function HeroDateCard() {
         {/* Divider */}
         <img
             src="/wedding-invitation/ornaments/divider.svg"
-            className="mx-auto my-6 w-52"
+            className="mx-auto my-2 w-28"
         />
 
         {/* Date */}
         <h2
           className="
             font-serif
-            text-5xl
+            text-2xl
             font-light
             tracking-wide
             text-white
@@ -78,7 +78,7 @@ export function HeroDateCard() {
         {/* Bottom Ornament */}
         <img
             src="/wedding-invitation/ornaments/flower.svg"
-            className="mx-auto mt-8 h-10"
+            className="mx-auto mt-3 h-6"
         />
 
       </div>

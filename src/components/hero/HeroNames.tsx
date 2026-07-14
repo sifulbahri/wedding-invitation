@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function HeroNames() {
   return (
-    <div className="mt-16 flex flex-col items-center">
+    <div className="mt-8 flex flex-col items-center">
       {/* Groom */}
       <motion.h1
         initial={{ opacity: 0, y: 40 }}
@@ -13,11 +13,12 @@ export function HeroNames() {
         }}
         className="
           font-serif
-          text-6xl
+          text-5xl
           font-light
+          leading-none
           tracking-wide
           text-white
-          md:text-8xl
+          md:text-7xl
         "
       >
         Siful
@@ -52,11 +53,12 @@ export function HeroNames() {
         }}
         className="
           font-serif
-          text-6xl
+          text-5xl
           font-light
+          leading-none
           tracking-wide
           text-white
-          md:text-8xl
+          md:text-7xl
         "
       >
         Yulianti
