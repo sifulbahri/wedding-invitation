@@ -77,6 +77,8 @@ export function HeroSection() {
           <HeroDateCard />
 
         </motion.div>
+
+        <HeroScroll onClick={scrollToNext}/>
       </Container>
     </Section>
   );
