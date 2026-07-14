@@ -37,9 +37,14 @@ export function HeroSection() {
     >
       {/* Background */}
       <HeroBackground />
+      <HeroBackground />
+      <HeroParticles />
+      <HeroGlow />
+      <HeroFrame />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/65" />
+
 
       {/* Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black" />
@@ -62,24 +67,15 @@ export function HeroSection() {
           }}
           className="mx-auto max-w-3xl text-center"
         >
-          <Paragraph className="uppercase tracking-[0.45em] text-secondary">
-            Save The Date
-          </Paragraph>
 
+          <HeroMonogram />
+
+          <HeroTitle />
 
           <HeroNames />
 
-          <Paragraph className="mt-2 text-2xl font-semibold text-foreground">
-              {new Date(site.weddingDate).toLocaleDateString(
-                site.locale,
-                {
-                  weekday: "long",
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                },
-              )}
-          </Paragraph>
+          <HeroDateCard />
+
         </motion.div>
       </Container>
     </Section>

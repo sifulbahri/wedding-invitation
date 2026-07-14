@@ -1,0 +1,11 @@
+<svg width="220" height="24" viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#C9A34E" stroke-width="1.2">
+        <line x1="0" y1="12" x2="90" y2="12"/>
+        <line x1="130" y1="12" x2="220" y2="12"/>
+    </g>
+
+    <g fill="#C9A34E">
+        <circle cx="110" cy="12" r="2"/>
+        <path d="M100 12L110 4L120 12L110 20Z"/>
+    </g>
+</svg>

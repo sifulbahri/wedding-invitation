@@ -1,4 +1,3 @@
-import { CalendarDays, Clock, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function HeroDateCard() {
@@ -13,81 +12,74 @@ export function HeroDateCard() {
         y: 0,
       }}
       transition={{
-        delay: 1.4,
+        delay: 1.2,
         duration: 0.8,
       }}
-      className="
-        mt-16
-        w-full
-        max-w-md
-        rounded-[32px]
-        border
-        border-[#C9A34E]/30
-        bg-black/30
-        p-8
-        backdrop-blur-xl
-        shadow-[0_0_40px_rgba(201,163,78,.15)]
-      "
+      className="relative mx-auto mt-20 w-full max-w-xl"
     >
-      {/* Day */}
-      <div className="text-center">
-        <p className="tracking-[0.35em] text-sm uppercase text-[#C9A34E]">
+      {/* Left Ornament */}
+      <img
+        src="/wedding-invitation/ornaments/left.svg"
+        className="absolute -left-10 top-1/2 -translate-y-1/2 h-44"
+      />
+
+      {/* Right Ornament */}
+      <img
+        src="/wedding-invitation/ornaments/right.svg"
+        className="absolute -right-10 top-1/2 -translate-y-1/2 h-44"
+      />
+
+      {/* Card */}
+      <div
+        className="
+        rounded-[34px]
+        border
+        border-[#C9A34E]/70
+        bg-black/40
+        px-10
+        py-12
+        text-center
+      "
+      >
+        {/* Day */}
+        <p
+          className="
+            text-sm
+            uppercase
+            tracking-[0.7em]
+            text-[#C9A34E]
+            md:text-base
+          "
+        >
           Sunday
         </p>
 
-        <h2 className="mt-3 font-serif text-5xl text-white">
-          15
+        {/* Divider */}
+        <img
+            src="/wedding-invitation/ornaments/divider.svg"
+            className="mx-auto my-6 w-52"
+        />
+
+        {/* Date */}
+        <h2
+          className="
+            font-serif
+            text-5xl
+            font-light
+            tracking-wide
+            text-white
+
+            md:text-4xl
+          "
+        >
+          15 November 2026
         </h2>
 
-        <p className="mt-2 text-lg tracking-[0.3em] uppercase text-gray-300">
-          November 2026
-        </p>
-      </div>
-
-      {/* Divider */}
-      <div className="my-8 flex items-center gap-4">
-        <div className="h-px flex-1 bg-[#C9A34E]/30" />
-
-        <div className="h-2 w-2 rotate-45 bg-[#C9A34E]" />
-
-        <div className="h-px flex-1 bg-[#C9A34E]/30" />
-      </div>
-
-      {/* Details */}
-      <div className="space-y-5">
-
-        <div className="flex items-center gap-4">
-          <CalendarDays
-            className="text-[#C9A34E]"
-            size={20}
-          />
-
-          <span className="text-gray-200">
-            Sunday, 15 November 2026
-          </span>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <Clock
-            className="text-[#C9A34E]"
-            size={20}
-          />
-
-          <span className="text-gray-200">
-            09.00 WIB
-          </span>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <MapPin
-            className="text-[#C9A34E]"
-            size={20}
-          />
-
-          <span className="text-gray-200">
-            Bogor, Indonesia
-          </span>
-        </div>
+        {/* Bottom Ornament */}
+        <img
+            src="/wedding-invitation/ornaments/flower.svg"
+            className="mx-auto mt-8 h-10"
+        />
 
       </div>
     </motion.div>
