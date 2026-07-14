@@ -10,6 +10,9 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
+
+import { couple } from "@/data/couple";
+
 export function BrideGroomSection() {
   return (
     <Section
@@ -48,13 +51,13 @@ export function BrideGroomSection() {
           >
             <Card className="text-center">
               <img
-                src="/wedding-invitation/images/groom/groom.jpg"
-                alt="Siful Bahri"
+                src={couple.groom.photo}
+                alt={couple.groom.name}
                 className="mx-auto h-72 w-72 rounded-full object-cover border-4 border-[var(--secondary)]"
               />
 
               <Heading className="mt-8 text-5xl">
-                Siful Bahri
+                {couple.groom.name}
               </Heading>
 
               <Paragraph className="mt-4">
@@ -62,15 +65,15 @@ export function BrideGroomSection() {
               </Paragraph>
 
               <Paragraph>
-                Mr. SUPRIYADI
+                Mr. {couple.groom.father}
               </Paragraph>
 
               <Paragraph>
-                & Mrs. RUMI
+                & Mrs. {couple.groom.mother}
               </Paragraph>
 
               <a
-                href="https://instagram.com/"
+                href={couple.groom.instagram}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 inline-flex items-center gap-2 text-secondary"
@@ -89,13 +92,13 @@ export function BrideGroomSection() {
           >
             <Card className="text-center">
               <img
-                src="/wedding-invitation/images/bride/bride.png"
-                alt="Yulianti Agustina"
+                src={couple.bride.photo}
+                alt={couple.bride.name}
                 className="mx-auto h-72 w-72 rounded-full object-cover border-4 border-[var(--secondary)]"
               />
 
               <Heading className="mt-8 text-5xl">
-                Yulianti Agustina
+                {couple.bride.name}
               </Heading>
 
               <Paragraph className="mt-4">
@@ -103,15 +106,15 @@ export function BrideGroomSection() {
               </Paragraph>
 
               <Paragraph>
-                Mr. MUCHSIN AMIR HASAN AZZI
+                Mr. {couple.bride.father}
               </Paragraph>
 
               <Paragraph>
-                & Mrs. IIS ASIKAH
+                & Mrs. {couple.bride.mother}
               </Paragraph>
 
               <a
-                href="https://instagram.com/"
+                href={couple.bride.instagram}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 inline-flex items-center gap-2 text-secondary"

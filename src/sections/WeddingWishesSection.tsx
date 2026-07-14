@@ -14,12 +14,6 @@ import {
 import { wishes } from "@/data/wishes";
 import type { Wish } from "@/types/wish";
 
-interface Wish {
-  id: number;
-  name: string;
-  message: string;
-}
-
 export function WishesSection() {
   return (
     <section>
