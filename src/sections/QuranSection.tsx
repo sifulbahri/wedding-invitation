@@ -30,7 +30,7 @@ export function QuranSection() {
           transition={{
             duration: 0.8,
           }}
-          className="mx-auto max-w-4xl text-center"
+          className="mx-auto max-w-3xl text-center"
         >
           <Paragraph className="uppercase tracking-[0.4em] text-secondary">
             Quran Verse
@@ -42,7 +42,7 @@ export function QuranSection() {
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
           </Heading>
 
-          <p className="font-arabic mt-12 text-4xl leading-loose md:text-5xl">
+          <p className="font-arabic mt-12 text-3xl leading-loose md:text-4xl">
 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
           </p>
 
