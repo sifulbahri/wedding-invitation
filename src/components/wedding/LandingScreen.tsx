@@ -25,7 +25,7 @@ export function LandingScreen() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/wedding-invitation/images/hero/background.jpg')",
+          backgroundImage: "url('/wedding-invitation/images/hero/background.png')",
         }}
       />
 
