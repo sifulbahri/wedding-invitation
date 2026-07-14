@@ -15,6 +15,8 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
+import { site } from "@/data/site";
+
 export function FooterSection() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -53,7 +55,7 @@ export function FooterSection() {
           <Divider />
 
           <Heading>
-            Siful & Yulianti
+            {site.title}
           </Heading>
 
           <Paragraph className="mt-8">
@@ -74,7 +76,7 @@ export function FooterSection() {
           </div>
 
           <Paragraph className="mt-10 text-secondary">
-            Sunday, 15 November 2026
+            {site.weddingDate}
           </Paragraph>
 
           <div className="mt-12 flex justify-center gap-6">
@@ -109,7 +111,7 @@ export function FooterSection() {
           </Button>
 
           <Paragraph className="mt-16 text-sm text-muted">
-            © 2026 Siful & Yulianti.
+            {site.copyright}.
             All Rights Reserved.
           </Paragraph>
         </motion.div>

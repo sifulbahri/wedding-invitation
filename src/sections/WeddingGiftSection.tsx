@@ -10,31 +10,8 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
-interface GiftMethod {
-  id: number;
-  type: "bank" | "qris";
-  title: string;
-  accountName: string;
-  accountNumber?: string;
-  image?: string;
-}
+import { gifts } from "@/data/gifts";
 
-const giftMethods: GiftMethod[] = [
-  {
-    id: 1,
-    type: "bank",
-    title: "Bank BCA",
-    accountName: "Siful Bahri",
-    accountNumber: "1234567890",
-  },
-  {
-    id: 2,
-    type: "qris",
-    title: "QRIS",
-    accountName: "Siful Bahri",
-    image: "/images/gift/qris.png",
-  },
-];
 
 export function WeddingGiftSection() {
   const copyToClipboard = async (text: string) => {
@@ -75,7 +52,7 @@ export function WeddingGiftSection() {
         </motion.div>
 
         <div className="mt-20 grid gap-10 lg:grid-cols-2">
-          {giftMethods.map((gift) => (
+          {gifts.map((gift) => (
             <motion.div
               key={gift.id}
               initial={{ opacity: 0, y: 30 }}

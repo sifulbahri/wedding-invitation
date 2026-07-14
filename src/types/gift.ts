@@ -1,3 +1,5 @@
+export type GiftType = "bank" | "qris";
+
 export interface GiftMethod {
   id: number;
   type: "bank" | "qris";

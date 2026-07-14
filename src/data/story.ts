@@ -1,5 +1,8 @@
+import type { StoryItem } from "@/types";
+
 export const story = [
   {
+    id: 1,
     year: "2025",
 
     title: "First Meeting",
@@ -9,6 +12,7 @@ export const story = [
   },
 
   {
+    id: 2,
     year: "2025",
 
     title: "Growing Together",
@@ -18,6 +22,7 @@ export const story = [
   },
 
   {
+    id: 3,
     year: "2026",
 
     title: "Engagement",
@@ -27,6 +32,7 @@ export const story = [
   },
 
   {
+    id: 4,
     year: "2026",
 
     title: "Wedding Day",

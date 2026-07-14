@@ -1,3 +1,5 @@
+import type { site } from "@/types/site";
+
 export const site = {
   title: "Siful & Yulianti",
 
@@ -6,7 +8,7 @@ export const site = {
   description:
     "Together with our beloved families, we invite you to celebrate our wedding.",
 
-  weddingDate: "2026-11-15T09:00:00",
+  weddingDate: "2026-11-15T08:00:00",
 
   locale: "id-ID",
 

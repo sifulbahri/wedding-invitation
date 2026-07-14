@@ -13,33 +13,11 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
-interface EventCard {
-  title: string;
-  day: string;
-  date: string;
-  time: string;
-  venue: string;
-  address: string;
-}
+import { weddingEvents } from "@/data/event";
+import dayjs from "dayjs";
+import "dayjs/locale/id";
 
-const events: EventCard[] = [
-  {
-    title: "Akad Nikah",
-    day: "Sunday",
-    date: "15 November 2026",
-    time: "08:00 WIB - 09:00 WIB",
-    venue: "Wedding Venue",
-    address: "Bogor. Indonesia",
-  },
-  {
-    title: "Walimatul Ursy",
-    day: "Sunday",
-    date: "15 November 2026",
-    time: "09:00 WIB - 15:00 WIB",
-    venue: "Wedding Venue",
-    address: "Bogor. Indonesia",
-  },
-];
+dayjs.locale("id");
 
 export function WeddingEventSection() {
   return (
@@ -82,23 +60,18 @@ export function WeddingEventSection() {
         </motion.div>
 
         <div className="mt-20 grid gap-10 lg:grid-cols-2">
-          {events.map((event, index) => (
+          {weddingEvents.map((event, index) => {
+            const start = dayjs(event.startsAt);
+            const end = dayjs(event.endsAt);
+
+              return (
+
             <motion.div
-              key={event.title}
-              initial={{
-                opacity: 0,
-                y: 40,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                delay: index * 0.2,
-              }}
+              key={event.id}
+              initial={{opacity: 0, y: 40,}}
+              whileInView={{opacity: 1,y: 0,}}
+              viewport={{once: true,}}
+              transition={{delay: index * 0.2,}}
               className="rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-sm"
             >
               <Heading className="text-4xl">
@@ -113,11 +86,7 @@ export function WeddingEventSection() {
                   />
 
                   <div>
-                    <Paragraph>{event.day}</Paragraph>
-
-                    <Paragraph>
-                      {event.date}
-                    </Paragraph>
+                    <Paragraph>{start.format("dddd")}, {start.format("DD MMMM YYYY")}</Paragraph>
                   </div>
                 </div>
 
@@ -128,7 +97,7 @@ export function WeddingEventSection() {
                   />
 
                   <Paragraph>
-                    {event.time}
+                    {start.format("HH:mm")} - {end.format("HH:mm")} WIB
                   </Paragraph>
                 </div>
 
@@ -152,11 +121,18 @@ export function WeddingEventSection() {
 
               <button
                 className="mt-10 rounded-full bg-[var(--secondary)] px-8 py-3 font-medium text-black transition hover:opacity-90"
+                  onClick={() =>
+                    window.open(
+                      event.mapsUrl,
+                      "_blank",
+                      "noopener,noreferrer",
+                    )
+                  }
               >
                 View Location
               </button>
             </motion.div>
-          ))}
+          )})}
         </div>
       </Container>
     </Section>

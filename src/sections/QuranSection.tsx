@@ -8,6 +8,8 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
+import { quran } from "@/data/quran";
+
 export function QuranSection() {
   return (
     <Section
@@ -43,17 +45,15 @@ export function QuranSection() {
           </Heading>
 
           <p className="font-arabic mt-12 text-3xl leading-loose md:text-4xl">
-وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+            {quran.arabic}
           </p>
 
           <Paragraph className="mt-12 text-base leading-9">
-            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
-             agar kamu cenderung dan merasa tenteram kepadanya. Dia menjadikan di antaramu rasa kasih dan sayang. 
-             Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+            {quran.translation}
           </Paragraph>
 
           <Paragraph className="mt-6 text-secondary font-semibold">
-            QS. Ar-Rum : 21
+            {quran.surah}
           </Paragraph>
         </motion.div>
       </Container>

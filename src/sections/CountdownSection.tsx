@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/Typography";
 
 import { useCountdown } from "@/hooks/useCountdown";
+import { site } from "@/data/site";
 
 function CountdownCard({
   value,

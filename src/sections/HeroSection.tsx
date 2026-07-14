@@ -5,6 +5,9 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Heading, Paragraph } from "@/components/ui/Typography";
 
+import { couple } from "@/data/couple";
+import { site } from "@/data/site";
+
 export function HeroSection() {
   const scrollToNext = () => {
     const next = document.getElementById("bride-groom");
@@ -58,7 +61,7 @@ export function HeroSection() {
           </Paragraph>
 
           <Heading className="mt-8 text-6xl md:text-8xl">
-            Siful
+            {couple.groom.nickname}
           </Heading>
 
           <Paragraph className="my-6 text-4xl text-secondary">
@@ -66,15 +69,19 @@ export function HeroSection() {
           </Paragraph>
 
           <Heading className="text-6xl md:text-8xl">
-            Yulianti
+            {couple.bride.nickname}
           </Heading>
 
-          <Paragraph className="mt-10 text-lg text-muted">
-            Sunday
-          </Paragraph>
-
           <Paragraph className="mt-2 text-2xl font-semibold text-foreground">
-            15 November 2026
+              {new Date(site.weddingDate).toLocaleDateString(
+                site.locale,
+                {
+                  weekday: "long",
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                },
+              )}
           </Paragraph>
         </motion.div>
 
