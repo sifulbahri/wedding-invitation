@@ -11,8 +11,8 @@ import {
 } from "@/components/ui/Typography";
 
 const images = [
-  "/images/gallery/gallery-1.jpg",
-  "/images/gallery/gallery-2.jpg",
+  "/wedding-invitation/images/gallery/IMG001.jpg",
+  "/wedding-invitation/images/gallery/IMG002.jpg",
   "/images/gallery/gallery-3.jpg",
   "/images/gallery/gallery-4.jpg",
   "/images/gallery/gallery-5.jpg",

@@ -27,9 +27,9 @@ const events: EventCard[] = [
     title: "Akad Nikah",
     day: "Sunday",
     date: "15 November 2026",
-    time: "09:00 WIB",
+    time: "08:00 WIB",
     venue: "Wedding Venue",
-    address: "Complete venue address",
+    address: "Bogor. Indonesia",
   },
   {
     title: "Wedding Reception",
@@ -37,7 +37,7 @@ const events: EventCard[] = [
     date: "15 November 2026",
     time: "13:00 WIB",
     venue: "Wedding Venue",
-    address: "Complete venue address",
+    address: "Bogor. Indonesia",
   },
 ];
 
