@@ -1,9 +1,8 @@
 export interface WeddingEvent {
   id: number;
   title: string;
-  day: string;
-  date: string;
-  time: string;
+  startsAt: ISODateTimeString;
+  endsAt: ISODateTimeString;
   venue: string;
   address: string;
   mapsUrl: string;
