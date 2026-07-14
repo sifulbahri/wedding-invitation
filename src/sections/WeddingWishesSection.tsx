@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 
+
+
 import { Container } from "@/components/ui/Container";
 import { Divider } from "@/components/ui/Divider";
 import { Section } from "@/components/ui/Section";
@@ -9,32 +11,27 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
+import { wishes } from "@/data/wishes";
+import type { Wish } from "@/types/wish";
+
 interface Wish {
   id: number;
   name: string;
   message: string;
 }
 
-const wishes: Wish[] = [
-  {
-    id: 1,
-    name: "Ahmad",
-    message:
-      "Congratulations! May Allah bless your marriage with love, mercy, and happiness.",
-  },
-  {
-    id: 2,
-    name: "Sarah",
-    message:
-      "Wishing both of you a lifetime filled with joy, health, and endless blessings.",
-  },
-  {
-    id: 3,
-    name: "Rizky",
-    message:
-      "Happy wedding! May your new journey together always be under Allah's guidance.",
-  },
-];
+export function WishesSection() {
+  return (
+    <section>
+      {wishes.map((wish) => (
+        <div key={wish.id}>
+          <h3>{wish.name}</h3>
+          <p>{wish.message}</p>
+        </div>
+      ))}
+    </section>
+  );
+}
 
 export function WeddingWishesSection() {
   return (
