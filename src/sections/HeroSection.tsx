@@ -8,15 +8,15 @@ import { Heading, Paragraph } from "@/components/ui/Typography";
 import { couple } from "@/data/couple";
 import { site } from "@/data/site";
 
-import { HeroBackground } from "/src/components/hero/HeroBackground";
-import { HeroFrame } from "/src/components/hero/HeroFrame";
-import { HeroMonogram } from "/src/components/hero/HeroMonogram";
-import { HeroTitle } from "/src/components/hero/HeroTitle";
-import { HeroNames } from "/src/components/hero/HeroNames";
-import { HeroDateCard } from "/src/components/hero/HeroDateCard";
-import { HeroScroll } from "/src/components/hero/HeroScroll";
-import { HeroGlow } from "/src/components/hero/HeroGlow";
-import { HeroParticles } from "/src/components/hero/HeroParticles";
+import { HeroBackground } from "@/components/hero/HeroBackground";
+import { HeroFrame } from "@/components/hero/HeroFrame";
+import { HeroMonogram } from "@/components/hero/HeroMonogram";
+import { HeroTitle } from "@/components/hero/HeroTitle";
+import { HeroNames } from "@/components/hero/HeroNames";
+import { HeroDateCard } from "@/components/hero/HeroDateCard";
+import { HeroScroll } from "@/components/hero/HeroScroll";
+import { HeroGlow } from "@/components/hero/HeroGlow";
+import { HeroParticles } from "@/components/hero/HeroParticles";
 
 
 export function HeroSection() {
@@ -78,7 +78,9 @@ export function HeroSection() {
 
         </motion.div>
 
-        <HeroScroll onClick={scrollToNext}/>
+        <HeroScroll
+            onClick={scrollToNext}
+        />
       </Container>
     </Section>
   );

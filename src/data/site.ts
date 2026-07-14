@@ -1,6 +1,6 @@
-import type { site } from "@/types/site";
+import type { Site } from "@/types/site";
 
-export const site = {
+export const site: Site = {
   title: "Siful & Yulianti",
 
   subtitle: "Wedding Invitation",
@@ -14,6 +14,5 @@ export const site = {
 
   language: "en",
 
-  copyright:
-    "© 2026 Siful & Yulianti",
+  copyright: "© 2026 Siful & Yulianti",
 };

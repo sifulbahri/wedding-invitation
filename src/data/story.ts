@@ -1,4 +1,4 @@
-import type { StoryItem } from "@/types";
+import type { StoryItem } from "@/types/story";
 
 export const story = [
   {

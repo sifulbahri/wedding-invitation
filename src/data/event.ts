@@ -1,6 +1,6 @@
-import type { event } from "@/types/event";
+import type { WeddingEvent } from "@/types/event";
 
-export const weddingEvents = [
+export const weddingEvents: WeddingEvent[] = [
   {
     id: 1,
     title: "Akad Nikah",

@@ -1,4 +1,4 @@
-import type { GiftMethod } from "@/types";
+import type { GiftMethod } from "@/types/gift";
 
 export const gifts: GiftMethod[] = [
   {
