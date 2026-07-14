@@ -8,6 +8,17 @@ import { Heading, Paragraph } from "@/components/ui/Typography";
 import { couple } from "@/data/couple";
 import { site } from "@/data/site";
 
+import { HeroBackground } from "/src/components/hero/HeroBackground";
+import { HeroFrame } from "/src/components/hero/HeroFrame";
+import { HeroMonogram } from "/src/components/hero/HeroMonogram";
+import { HeroTitle } from "/src/components/hero/HeroTitle";
+import { HeroNames } from "/src/components/hero/HeroNames";
+import { HeroDateCard } from "/src/components/hero/HeroDateCard";
+import { HeroScroll } from "/src/components/hero/HeroScroll";
+import { HeroGlow } from "/src/components/hero/HeroGlow";
+import { HeroParticles } from "/src/components/hero/HeroParticles";
+
+
 export function HeroSection() {
   const scrollToNext = () => {
     const next = document.getElementById("bride-groom");
@@ -25,12 +36,7 @@ export function HeroSection() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
     >
       {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/images/hero/hero.jpg')",
-        }}
-      />
+      <HeroBackground />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/65" />
@@ -60,17 +66,8 @@ export function HeroSection() {
             Save The Date
           </Paragraph>
 
-          <Heading className="mt-8 text-6xl md:text-8xl">
-            {couple.groom.nickname}
-          </Heading>
 
-          <Paragraph className="my-6 text-4xl text-secondary">
-            &
-          </Paragraph>
-
-          <Heading className="text-6xl md:text-8xl">
-            {couple.bride.nickname}
-          </Heading>
+          <HeroNames />
 
           <Paragraph className="mt-2 text-2xl font-semibold text-foreground">
               {new Date(site.weddingDate).toLocaleDateString(
