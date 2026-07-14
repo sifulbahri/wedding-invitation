@@ -33,6 +33,12 @@ export function WeddingWishesSection() {
       id="wishes"
       className="bg-background"
     >
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/wedding-invitation/images/hero/background.png')",
+      }}
+    />
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -41,6 +47,7 @@ export function WeddingWishesSection() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
+
           <Paragraph className="uppercase tracking-[0.4em] text-secondary">
             Wedding Wishes
           </Paragraph>

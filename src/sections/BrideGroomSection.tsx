@@ -17,8 +17,20 @@ export function BrideGroomSection() {
   return (
     <Section
       id="bride-groom"
-      className="bg-[var(--surface)]"
+        className="
+        relative
+        overflow-hidden
+        bg-[#0B0B0B]
+        bg-[radial-gradient(circle_at_top,#34131e_0%,#111111_45%,#070707_100%)]
+        "
     >
+
+        <div className="absolute inset-0 opacity-10 bg-[url('/wedding-invitation/ornaments/noise.png')]" />
+
+        <div className="absolute left-0 top-0 h-80 w-80 bg-yellow-500 blur-[180px] opacity-10"/>
+
+        <div className="absolute right-0 bottom-0 h-80 w-80 bg-[#7b1836] blur-[180px] opacity-20"/>
+
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -27,36 +39,56 @@ export function BrideGroomSection() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <Paragraph className="uppercase tracking-[0.4em] text-secondary">
-            Bride & Groom
-          </Paragraph>
+            <Paragraph className="uppercase tracking-[0.6em] text-yellow-500">
+            THE HAPPY COUPLE
+            </Paragraph>
+
+            <Heading className="mt-6 text-6xl font-serif text-white">
+            Bride <span className="text-yellow-500">&</span> Groom
+            </Heading>
 
           <Divider />
 
           <Heading>In the Name of Allah</Heading>
 
           <Paragraph className="mx-auto mt-8 max-w-2xl">
-            We are pleased to invite you to celebrate
-            our wedding and share our happiness on
-            this special day.
+            Dengan penuh rasa syukur dan bahagia,
+            kami ingin memperkenalkan mempelai yang akan mengikat janji suci.
           </Paragraph>
         </motion.div>
 
-        <div className="mt-20 grid gap-12 lg:grid-cols-2">
+        <div className="mt-28 grid gap-20 lg:grid-cols-2">
           {/* Groom */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <Card className="text-center">
-              <img
-                src={couple.groom.photo}
-                alt={couple.groom.name}
-                className="mx-auto h-72 w-72 rounded-full object-cover border-4 border-[var(--secondary)]"
-              />
+            <Card 
+                className="
+                bg-transparent
+                border-none
+                shadow-none
+                text-center
+                "
+            >
 
-              <Heading className="mt-8 text-5xl">
+                <div className="relative mx-auto w-[320px]">
+                    <div className="overflow-hidden rounded-t-[180px] rounded-b-md border border-yellow-500 bg-[#1B1B1B] p-2 shadow-[0_0_40px_rgba(212,175,55,0.15)]">
+                        <img
+                            src={couple.groom.photo}
+                            alt={couple.groom.name}
+                            className="h-[420px] w-full rounded-t-[170px] object-cover"
+                        />
+                    </div>
+                </div>
+
+              <Heading className="
+                mt-8
+                font-[var(--font-script)]
+                text-6xl
+                text-yellow-400
+                ">
                 {couple.groom.name}
               </Heading>
 
@@ -76,10 +108,23 @@ export function BrideGroomSection() {
                 href={couple.groom.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8 inline-flex items-center gap-2 text-secondary"
+                className="
+                    mx-auto
+                    mt-8
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-yellow-500
+                    hover:bg-yellow-500
+                    hover:text-black
+                    transition
+                    "
               >
                 <Instagram size={20} />
-                @sifulbahri
               </a>
             </Card>
           </motion.div>
@@ -90,14 +135,29 @@ export function BrideGroomSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <Card className="text-center">
-              <img
-                src={couple.bride.photo}
-                alt={couple.bride.name}
-                className="mx-auto h-72 w-72 rounded-full object-cover border-4 border-[var(--secondary)]"
-              />
+            <Card
+            className="
+                bg-transparent
+                border-none
+                shadow-none
+                text-center
+                ">
+                <div className="relative mx-auto w-[320px]">
+                    <div className="overflow-hidden rounded-t-[180px] rounded-b-md border border-yellow-500 bg-[#1B1B1B] p-2 shadow-[0_0_40px_rgba(212,175,55,0.15)]">
+                        <img
+                            src={couple.bride.photo}
+                            alt={couple.bride.name}
+                            className="h-[420px] w-full rounded-t-[170px] object-cover"
+                        />
+                    </div>
+                </div>
 
-              <Heading className="mt-8 text-5xl">
+              <Heading className="
+                    mt-8
+                    font-[var(--font-script)]
+                    text-6xl
+                    text-yellow-400
+                    ">
                 {couple.bride.name}
               </Heading>
 
@@ -117,10 +177,23 @@ export function BrideGroomSection() {
                 href={couple.bride.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8 inline-flex items-center gap-2 text-secondary"
+                className="
+                    mx-auto
+                    mt-8
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-yellow-500
+                    hover:bg-yellow-500
+                    hover:text-black
+                    transition
+                    "
               >
                 <Instagram size={20} />
-                @yulianti
               </a>
             </Card>
           </motion.div>
