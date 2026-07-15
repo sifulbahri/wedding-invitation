@@ -10,18 +10,17 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
-const images = [
-  "/wedding-invitation/images/gallery/IMG001.jpg",
-  "/wedding-invitation/images/gallery/IMG002.jpg",
-  "/wedding-invitation/images/gallery/IMG003.jpg",
-  "/wedding-invitation/images/gallery/IMG004.jpg",
-  "/wedding-invitation/images/gallery/IMG005.jpg",
-  "/wedding-invitation/images/gallery/IMG006.jpg",
-];
+import { GalleryHorizontal } from "lucide-react";
+import { ImageIcon } from "lucide-react";
+import { gallery } from "@/data/gallery";
 
 export function GallerySection() {
   const [selectedIndex, setSelectedIndex] =
     useState<number | null>(null);
+
+  const currentImage = selectedIndex !== null
+    ? gallery[selectedIndex]
+    : null;
 
   const close = () => setSelectedIndex(null);
 
@@ -30,7 +29,7 @@ export function GallerySection() {
 
     setSelectedIndex(
       selectedIndex === 0
-        ? images.length - 1
+        ? gallery.length - 1
         : selectedIndex - 1,
     );
   };
@@ -39,94 +38,92 @@ export function GallerySection() {
     if (selectedIndex === null) return;
 
     setSelectedIndex(
-      selectedIndex === images.length - 1
+      selectedIndex === gallery.length - 1
         ? 0
         : selectedIndex + 1,
     );
   };
 
   return (
-    <Section id="gallery" className="relative overflow-hidden bg-[#090909]" py-10>
-        <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
-            style={{backgroundImage: "url('/wedding-invitation/images/GalleryBackground.png')",}}
-          />
+    <Section id="gallery" className="relative overflow-hidden bg-[#090909] py-24 md:py-20">
 
+      {/* Background */}
+      <div
+        className="absolute inset-0 -z-20 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('/wedding-invitation/images/GalleryBackground.png')",
+        }}
+      />
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mx-auto max-w-3xl"
+          className="text-center mx-auto max-w-3xl mt-6"
         >
-          <Paragraph className="uppercase tracking-[0.4em] text-secondary">
+          <Paragraph className="uppercase tracking-[0.45em] text-secondary">
             Gallery
           </Paragraph>
 
-          <div className="my-8 flex items-center justify-center gap-4">
-
-            <div className="h-px w-20 bg-[#C9A34E]/50"/>
-
-            <div className="h-2 w-2 rotate-45 border border-[#C9A34E]"/>
-
-            <div className="h-px w-20 bg-[#C9A34E]/50"/>
-
+          <div className="mt-5 mb-8 flex items-center justify-center gap-4">
+            <div className="h-px w-20 bg-[#C9A34E]/40" />
+            <div className="flex h-3 w-3 items-center justify-center rotate-45 border border-[#C9A34E]">
+              <div className="h-1 w-1 bg-[#C9A34E]" />
+            </div>
+            <div className="h-px w-20 bg-[#C9A34E]/40" />
           </div>
 
-          <Heading  className="text-5xl md:text-6xl text-white">Our Moments</Heading>
+          <Heading  className="text-5xl font-medium text-white md:text-6xl">Our Moments</Heading>
 
-          <Paragraph className="mx-auto mt-2 max-w-xl text-lg leading-9 text-white/70">
+          <Paragraph className="mx-auto mt-5 max-w-md text-lg leading-8 text-white/80">
             A collection of beautiful memories
+            <br />
             that brought us to this special day.
           </Paragraph>
         </motion.div>
 
-        <div className="mt-10 grid grid-cols-3 gap-4 md:grid-cols-3">
-          {images.map((image, index) => (
+        <div className="mt-10 grid grid-cols-3 gap-3 md:grid-cols-3">
+          {gallery.map((item, index) => (
             <motion.button
-              key={image}
+              key={item.id}
               type="button"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setSelectedIndex(index)}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[28px]
+                border
+                border-[#C9A34E]/20
+                backdrop-blur
+                ring-1
+                ring-[#C9A34E]/20
+                transition-all
+                duration-500
+                hover:ring-[#D4AF37]
+                hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]
+              ">
 
-
-
-              className="overflow-hidden
-group
-relative
-border
-border-[#C9A34E]/20
-bg-black/20
-backdrop-blur
-absolute
-inset-0
-rounded-[28px]
-ring-1
-ring-[#C9A34E]/20
-transition
-group-hover:ring-[#D4AF37]
-group-hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]
-"
-            >
-
-<div
-className="
-absolute
-inset-0
-bg-gradient-to-t
-from-black/50
-via-transparent
-to-transparent
-opacity-0
-transition
-group-hover:opacity-100
-"/>
+              <div
+                className="
+                absolute
+                inset-0
+                bg-gradient-to-t
+                from-black/50
+                via-transparent
+                to-transparent
+                opacity-0
+                transition
+                group-hover:opacity-100
+              "/>
 
               <img
-                src={image}
-                alt={`Gallery ${index + 1}`}
+                src={item.image}
+                alt={item.alt}
                 loading="lazy"
                 className="h-[200px] md:h-[50px] w-40 object-cover transition-all duration-700 group-hover:scale-110"
               />
@@ -140,7 +137,7 @@ group-hover:opacity-100
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/20"
+              className="fixed inset-0 z-50 flex items-center justify-center"
             >
               <button
                 onClick={close}
@@ -164,11 +161,13 @@ group-hover:opacity-100
                 />
               </button>
 
-              <img
-                src={images[selectedIndex]}
-                alt=""
-                className="max-h-[90vh] max-w-[90vw] rounded-2xl"
-              />
+              {currentImage && (
+                <img 
+                  src={currentImage.image}
+                  alt={currentImage.alt}
+                  className="max-h-[90vh] max-w-[90vw] rounded-2xl"
+                />
+              )}
 
               <button
                 onClick={next}
@@ -185,54 +184,44 @@ group-hover:opacity-100
         </AnimatePresence>
       </Container>
 
-<img
-src="/wedding-invitation/images/ornaments/leaf-top-left.png"
-className="
-absolute
-left-0
-top-0
-w-40
-opacity-80
-pointer-events-none
-"
-/>
+      <img
+        src="/wedding-invitation/images/ornaments/leaf-top-left.png"
+        className="absolute left-0 top-0 w-40 opacity-80 pointer-events-none"
+      />
 
-<img
-src="/wedding-invitation/images/ornaments/leaf-bottom-right.png"
-className="
-absolute
-bottom-0
-right-0
-w-40
-opacity-80
-pointer-events-none
-"
-/>
+      <img
+        src="/wedding-invitation/images/ornaments/leaf-bottom-right.png"
+        className="absolute bottom-0 right-0 w-40 opacity-80 pointer-events-none"
+      />
 
 
-<div className="mt-16 flex justify-center">
-
-<button
-className="
-rounded-xl
-border
-border-[#C9A34E]
-px-8
-py-4
-uppercase
-tracking-[0.2em]
-text-[#D4AF37]
-transition
-hover:bg-[#C9A34E]
-hover:text-black
-"
->
-
-See More Moments
-
-</button>
-
-</div>
+    <div className="mt-10 flex justify-center">
+      <button
+        className="
+          max-w-[250px]
+          h-12
+      whitespace-nowrap
+          group
+          flex items-center gap-3
+          rounded-2xl
+          border border-[#C9A34E]/60
+          px-9 py-4
+          uppercase
+          tracking-[0.28em]
+          text-xs
+          font-medium
+          text-[#D4AF37]
+          transition-all
+          duration-300
+          hover:border-[#D4AF37]
+          hover:bg-[#C9A34E]/10
+          hover:shadow-[0_0_25px_rgba(201,163,78,0.25)]
+        "
+      >
+        <GalleryHorizontal className="transition-transform duration-300 group-hover:scale-110" />
+        <span>See More Moments</span>
+      </button>
+    </div>
 
     </Section>
   );

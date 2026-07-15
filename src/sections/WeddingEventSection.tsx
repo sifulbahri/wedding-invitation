@@ -25,6 +25,16 @@ export function WeddingEventSection() {
       id="wedding-event"
       className="bg-[var(--surface)]"
     >
+      {/* Background */}
+
+      <div
+        className="absolute inset-0 -z-20 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('/wedding-invitation/images/GalleryBackground.png')",
+        }}
+      />
+
       <Container>
         <motion.div
           initial={{
