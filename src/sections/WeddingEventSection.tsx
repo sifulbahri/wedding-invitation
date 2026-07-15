@@ -23,17 +23,25 @@ export function WeddingEventSection() {
   return (
     <Section
       id="wedding-event"
-      className="bg-[var(--surface)]"
+      className="relative overflow-hidden bg-[var(--surface)]"
     >
       {/* Background */}
 
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('/wedding-invitation/images/GalleryBackground.png')",
-        }}
-      />
+<img
+  src="/wedding-invitation/images/GalleryBackground.png"
+  alt=""
+  aria-hidden="true"
+  className="
+    pointer-events-none
+    absolute
+    inset-0
+    h-full
+    w-full
+    object-cover
+    opacity-60
+    select-none
+  "
+/>
 
       <Container>
         <motion.div
@@ -53,6 +61,8 @@ export function WeddingEventSection() {
           }}
           className="text-center"
         >
+
+
           <Paragraph className="uppercase tracking-[0.4em] text-secondary">
             Wedding Event
           </Paragraph>
@@ -62,14 +72,22 @@ export function WeddingEventSection() {
           <Heading>
             Join Our Celebration
           </Heading>
+<div className="my-5 flex items-center gap-3">
 
-          <Paragraph className="mx-auto mt-8 max-w-2xl">
+<div className="h-px flex-1 bg-[#C9A34E]/30"/>
+
+<div className="h-2 w-2 rotate-45 border border-[#C9A34E]"/>
+
+<div className="h-px flex-1 bg-[#C9A34E]/30"/>
+
+</div>
+          <Paragraph className="mx-auto mt-8 max-w-2xl text-white/75">
             Your presence and prayers would be
             a great honor and happiness for us.
           </Paragraph>
         </motion.div>
 
-        <div className="mt-20 grid gap-10 lg:grid-cols-2">
+        <div className="mt-14 md:mt-16 grid gap-10 lg:grid-cols-2">
           {weddingEvents.map((event, index) => {
             const start = dayjs(event.startsAt);
             const end = dayjs(event.endsAt);
@@ -82,65 +100,115 @@ export function WeddingEventSection() {
               whileInView={{opacity: 1,y: 0,}}
               viewport={{once: true,}}
               transition={{delay: index * 0.2,}}
-              className="rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-sm"
-            >
-              <Heading className="text-4xl">
-                {event.title}
-              </Heading>
+              className="group relative overflow-hidden
+                rounded-[32px]border border-[#C9A34E]/25
+                bg-gradient-to-br
+                from-white/10 to-white/5 p-7
+                backdrop-blur-xl transition-all
+                duration-500
+                hover:border-[#C9A34E]/50
+                hover:shadow-[0_0_40px_rgba(201,163,78,0.12)]
+            ">
 
-              <div className="mt-10 space-y-6">
-                <div className="flex items-start gap-4">
+            <div className="absolute -left-20 -top-20 h-52 w-52 rounded-full bg-[#C9A34E]/10 blur-3xl" />
+            <div className="absolute bottom-0 right-0 h-36 w-36 rounded-full bg-[#C9A34E]/5 blur-2xl" />
+
+            <div className="relative flex flex-col gap-8 md:flex-row md:items-start">
+              {/* Left Side */}
+              <div className="hidden md:flex w-32 shrink-0 flex-col items-center">
+                <div className="flex h-28 w-28 items-center justify-center rounded-full border border-[#C9A34E]/40 bg-[#C9A34E]/5">
                   <CalendarDays
-                    className="text-secondary"
-                    size={22}
+                    size={42}
+                    className="text-[#D4AF37]"
                   />
-
-                  <div>
-                    <Paragraph>{start.format("dddd")}, {start.format("DD MMMM YYYY")}</Paragraph>
-                  </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <Clock3
-                    className="text-secondary"
-                    size={22}
-                  />
+                <div className="mt-4 h-px w-16 bg-[#C9A34E]/30" />
 
-                  <Paragraph>
-                    {start.format("HH:mm")} - {end.format("HH:mm")} WIB
-                  </Paragraph>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <MapPin
-                    className="text-secondary"
-                    size={22}
-                  />
-
-                  <div>
-                    <Paragraph>
-                      {event.venue}
-                    </Paragraph>
-
-                    <Paragraph>
-                      {event.address}
-                    </Paragraph>
-                  </div>
+                <div className="mt-3 flex gap-1">
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#C9A34E]" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#C9A34E]/70" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#C9A34E]/40" />
                 </div>
               </div>
 
-              <button
-                className="mt-10 rounded-full bg-[var(--secondary)] px-8 py-3 font-medium text-black transition hover:opacity-90"
-                  onClick={() =>
-                    window.open(
-                      event.mapsUrl,
-                      "_blank",
-                      "noopener,noreferrer",
-                    )
-                  }
-              >
-                View Location
-              </button>
+  {/* Right Side */}
+  <div className="flex-1">
+    <Heading className="text-3xl md:text-4xl">
+      {event.title}
+    </Heading>
+
+    <div className="my-5 flex items-center gap-3">
+      <div className="h-px flex-1 bg-[#C9A34E]/30" />
+      <div className="h-2 w-2 rotate-45 border border-[#C9A34E]" />
+      <div className="h-px flex-1 bg-[#C9A34E]/30" />
+    </div>
+
+    <div className="space-y-5">
+      {/* Date */}
+      <div className="flex items-start gap-4">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#C9A34E]/10">
+          <CalendarDays
+            size={18}
+            className="text-[#D4AF37]"
+          />
+        </div>
+
+        <Paragraph className="text-white/80">
+          {start.format("dddd")}, {start.format("DD MMMM YYYY")}
+        </Paragraph>
+      </div>
+
+      {/* Time */}
+      <div className="flex items-start gap-4">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#C9A34E]/10">
+          <Clock3
+            size={18}
+            className="text-[#D4AF37]"
+          />
+        </div>
+
+        <Paragraph className="text-white/80">
+          {start.format("HH:mm")} - {end.format("HH:mm")} WIB
+        </Paragraph>
+      </div>
+
+      {/* Location */}
+      <div className="flex items-start gap-4">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#C9A34E]/10">
+          <MapPin
+            size={18}
+            className="text-[#D4AF37]"
+          />
+        </div>
+
+        <div>
+          <Paragraph className="text-white/80">
+            {event.venue}
+          </Paragraph>
+
+          <Paragraph className="text-white/60">
+            {event.address}
+          </Paragraph>
+        </div>
+      </div>
+    </div>
+
+    <button
+      onClick={() =>
+        window.open(
+          event.mapsUrl,
+          "_blank",
+          "noopener,noreferrer",
+        )
+      }
+      className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#D4AF37] px-8 py-3.5 font-medium text-black transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_30px_rgba(212,175,55,0.35)]"
+    >
+      <MapPin size={18} />
+      View Location
+    </button>
+  </div>
+</div>
             </motion.div>
           )})}
         </div>
