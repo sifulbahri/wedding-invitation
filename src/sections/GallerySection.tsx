@@ -46,30 +46,43 @@ export function GallerySection() {
   };
 
   return (
-    <Section id="gallery">
+    <Section id="gallery" className="relative overflow-hidden bg-[#090909]">
+        <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
+            style={{backgroundImage: "url('/wedding-invitation/images/GalleryBackground.png')",}}
+          />
+
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="text-center mx-auto max-w-3xl"
         >
           <Paragraph className="uppercase tracking-[0.4em] text-secondary">
             Gallery
           </Paragraph>
 
-          <Divider />
+          <div className="my-8 flex items-center justify-center gap-4">
 
-          <Heading>Our Moments</Heading>
+            <div className="h-px w-20 bg-[#C9A34E]/50"/>
 
-          <Paragraph className="mx-auto mt-8 max-w-2xl">
+            <div className="h-2 w-2 rotate-45 border border-[#C9A34E]"/>
+
+            <div className="h-px w-20 bg-[#C9A34E]/50"/>
+
+          </div>
+
+          <Heading  className="text-5xl md:text-6xl text-white">Our Moments</Heading>
+
+          <Paragraph className="mx-auto mt-6 max-w-xl text-lg leading-9 text-white/70">
             A collection of beautiful memories
             that brought us to this special day.
           </Paragraph>
         </motion.div>
 
-        <div className="mt-20 grid grid-cols-2 gap-4 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-2 gap-6 md:grid-cols-3">
           {images.map((image, index) => (
             <motion.button
               key={image}
@@ -77,13 +90,47 @@ export function GallerySection() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setSelectedIndex(index)}
-              className="overflow-hidden rounded-3xl"
+
+
+
+              className="overflow-hidden
+group
+relative
+
+rounded-[28px]
+border
+border-[#C9A34E]/20
+bg-black/20
+backdrop-blur
+absolute
+inset-0
+rounded-[28px]
+ring-1
+ring-[#C9A34E]/20
+transition
+group-hover:ring-[#D4AF37]
+group-hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]
+"
             >
+
+<div
+className="
+absolute
+inset-0
+bg-gradient-to-t
+from-black/50
+via-transparent
+to-transparent
+opacity-0
+transition
+group-hover:opacity-100
+"/>
+
               <img
                 src={image}
                 alt={`Gallery ${index + 1}`}
                 loading="lazy"
-                className="h-72 w-full object-cover transition duration-500 hover:scale-110"
+                className="h-[280px] w-full object-cover transition-all duration-700 group-hover:scale-110"
               />
             </motion.button>
           ))}
@@ -139,6 +186,56 @@ export function GallerySection() {
           )}
         </AnimatePresence>
       </Container>
+
+<img
+src="/wedding-invitation/images/ornaments/leaf-top-left.png"
+className="
+absolute
+left-0
+top-0
+w-40
+opacity-80
+pointer-events-none
+"
+/>
+
+<img
+src="/wedding-invitation/images/ornaments/leaf-bottom-right.png"
+className="
+absolute
+bottom-0
+right-0
+w-40
+opacity-80
+pointer-events-none
+"
+/>
+
+
+<div className="mt-16 flex justify-center">
+
+<button
+className="
+rounded-xl
+border
+border-[#C9A34E]
+px-8
+py-4
+uppercase
+tracking-[0.2em]
+text-[#D4AF37]
+transition
+hover:bg-[#C9A34E]
+hover:text-black
+"
+>
+
+See More Moments
+
+</button>
+
+</div>
+
     </Section>
   );
 }
