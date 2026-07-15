@@ -46,7 +46,7 @@ export function GallerySection() {
   };
 
   return (
-    <Section id="gallery" className="relative overflow-hidden bg-[#090909]">
+    <Section id="gallery" className="relative overflow-hidden bg-[#090909]" py-10>
         <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
             style={{backgroundImage: "url('/wedding-invitation/images/GalleryBackground.png')",}}
@@ -76,13 +76,13 @@ export function GallerySection() {
 
           <Heading  className="text-5xl md:text-6xl text-white">Our Moments</Heading>
 
-          <Paragraph className="mx-auto mt-6 max-w-xl text-lg leading-9 text-white/70">
+          <Paragraph className="mx-auto mt-2 max-w-xl text-lg leading-9 text-white/70">
             A collection of beautiful memories
             that brought us to this special day.
           </Paragraph>
         </motion.div>
 
-        <div className="mt-16 grid grid-cols-2 gap-6 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-3 gap-4 md:grid-cols-3">
           {images.map((image, index) => (
             <motion.button
               key={image}
@@ -96,8 +96,6 @@ export function GallerySection() {
               className="overflow-hidden
 group
 relative
-
-rounded-[28px]
 border
 border-[#C9A34E]/20
 bg-black/20
@@ -130,7 +128,7 @@ group-hover:opacity-100
                 src={image}
                 alt={`Gallery ${index + 1}`}
                 loading="lazy"
-                className="h-[280px] w-full object-cover transition-all duration-700 group-hover:scale-110"
+                className="h-[200px] md:h-[50px] w-40 object-cover transition-all duration-700 group-hover:scale-110"
               />
             </motion.button>
           ))}
@@ -142,7 +140,7 @@ group-hover:opacity-100
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/20"
             >
               <button
                 onClick={close}
