@@ -15,8 +15,7 @@ import { ImageIcon } from "lucide-react";
 import { gallery } from "@/data/gallery";
 
 export function GallerySection() {
-  const [selectedIndex, setSelectedIndex] =
-    useState<number | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const currentImage = selectedIndex !== null
     ? gallery[selectedIndex]

@@ -1,6 +1,6 @@
-import { gallery } from "@/data/gallery";
+import { Gallery } from "@/types/gallery";
 
-export const gallery: GalleryImage[] = [
+export const gallery: Gallery[] = [
   {
     id: 1,
     image: "/wedding-invitation/images/gallery/IMG001.jpg",
