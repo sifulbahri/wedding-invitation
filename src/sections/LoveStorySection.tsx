@@ -15,8 +15,23 @@ export function LoveStorySection() {
   return (
     <Section
       id="love-story"
-      className="bg-[var(--surface)]"
+      className="relative overflow-hidden bg-[var(--surface)]"
     >
+
+      <img
+          src="/wedding-invitation/images/LocationBackground.png"
+          alt=""
+          aria-hidden="true"
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            h-full
+            w-full
+            object-cover
+            opacity-80
+          "
+        />
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 40 }}

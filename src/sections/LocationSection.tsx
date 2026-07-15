@@ -15,8 +15,24 @@ const GOOGLE_MAPS_URL =
 
 export function LocationSection() {
   return (
-    <Section id="location">
-      <Container>
+    <Section id="location"   className="relative overflow-hidden bg-[var(--surface)]">
+
+      <img
+          src="/wedding-invitation/images/LocationBackground.png"
+          alt=""
+          aria-hidden="true"
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            h-full
+            w-full
+            object-cover
+            opacity-80
+          "
+        />
+
+      <Container  className="relative z-10">
         <motion.div
           initial={{
             opacity: 0,
@@ -33,12 +49,22 @@ export function LocationSection() {
             duration: 0.8,
           }}
           className="text-center"
+
         >
           <Paragraph className="uppercase tracking-[0.4em] text-secondary">
             Location
           </Paragraph>
 
-          <Divider />
+<div className="my-8 flex items-center justify-center gap-4">
+    <div className="h-px w-24 bg-[#C9A34E]/40" />
+
+    <div className="flex h-3 w-3 rotate-45 items-center justify-center border border-[#C9A34E]">
+        <div className="h-1 w-1 bg-[#D4AF37]" />
+    </div>
+
+    <div className="h-px w-24 bg-[#C9A34E]/40" />
+</div>
+
 
           <Heading>
             Wedding Venue
@@ -50,32 +76,35 @@ export function LocationSection() {
           </Paragraph>
         </motion.div>
 
-        <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.98,
-          }}
-          whileInView={{
-            opacity: 1,
-            scale: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.8,
-          }}
-          className="mt-20 overflow-hidden rounded-3xl border border-white/10"
-        >
-          <iframe
-            title="Wedding Location"
-            src="https://www.google.com/maps?q=-6.2,106.8&z=15&output=embed"
-            className="h-[500px] w-full border-0"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </motion.div>
+<div
+    className="
+        absolute
+        bottom-[22%]
+        left-1/2
+        -translate-x-1/2
+    "
+>
+
+    <div className="
+        flex
+        h-20
+        w-20
+        items-center
+        justify-center
+        rounded-full
+        bg-[#D4AF37]
+        shadow-[0_0_40px_rgba(212,175,55,.45)]
+    ">
+
+        <MapPinned
+            size={34}
+            className="text-black"
+        />
+
+    </div>
+
+</div>
+
 
         <div className="mx-auto mt-12 max-w-3xl text-center">
           <div className="flex items-center justify-center gap-3">
@@ -90,27 +119,14 @@ export function LocationSection() {
           </div>
 
           <Paragraph className="mt-4">
-            Complete Wedding Address,
-            City, Province, Indonesia
+
+            Jl. Pondok Bitung. Sukaharja.
+            Bogor. Indonesia
           </Paragraph>
 
-          <Button
-            className="mt-10"
-            onClick={() =>
-              window.open(
-                GOOGLE_MAPS_URL,
-                "_blank",
-                "noopener,noreferrer",
-              )
-            }
-          >
-            <Navigation
-              size={18}
-              className="mr-2"
-            />
 
-            Open Google Maps
-          </Button>
+
+
         </div>
       </Container>
     </Section>
