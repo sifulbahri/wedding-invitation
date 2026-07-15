@@ -22,6 +22,6 @@ export const gifts: GiftMethod[] = [
 
     accountName: "Yulianti Agustina",
 
-    image: "/images/gift/qris.png",
+    image: "/wedding-invitation/images/gift/qris.png",
   },
 ];
