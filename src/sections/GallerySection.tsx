@@ -13,10 +13,10 @@ import {
 const images = [
   "/wedding-invitation/images/gallery/IMG001.jpg",
   "/wedding-invitation/images/gallery/IMG002.jpg",
-  "/wedding-invitation/images/gallery/IMG002.jpg",
-  "/wedding-invitation/images/gallery/IMG002.jpg",
-  "/wedding-invitation/images/gallery/IMG002.jpg",
-  "/wedding-invitation/images/gallery/IMG002.jpg",
+  "/wedding-invitation/images/gallery/IMG003.jpg",
+  "/wedding-invitation/images/gallery/IMG004.jpg",
+  "/wedding-invitation/images/gallery/IMG005.jpg",
+  "/wedding-invitation/images/gallery/IMG006.jpg",
 ];
 
 export function GallerySection() {
