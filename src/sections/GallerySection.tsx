@@ -83,7 +83,7 @@ export function GallerySection() {
     "
 />
 
-          <Heading  className="text-5xl font-medium text-white md:text-6xl">Our Moments</Heading>
+          <Heading>Our Moments</Heading>
 
           <Paragraph className="mx-auto mt-5 max-w-md text-lg leading-8 text-white/80">
             A collection of beautiful memories

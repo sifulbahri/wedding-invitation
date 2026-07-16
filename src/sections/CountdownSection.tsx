@@ -114,7 +114,7 @@ export function CountdownSection() {
     "
 />
 
-          <Heading className="text-5xl md:text-6xl">Countdown</Heading>
+          <Heading>Countdown</Heading>
 
           <Paragraph className="mx-auto mt-6 max-w-md leading-8 text-white/75">
             We look forward to celebrating our special

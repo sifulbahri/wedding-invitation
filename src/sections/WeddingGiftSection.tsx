@@ -71,7 +71,7 @@ export function WeddingGiftSection() {
     "
 />
 
-          <Heading className="text-5xl md:text-6xl">Send Your Blessing</Heading>
+          <Heading>Send Your Blessing</Heading>
 
           <Paragraph className="mx-auto mt-6 max-w-lg leading-8 text-white/75">
             Your prayers and presence are more than
