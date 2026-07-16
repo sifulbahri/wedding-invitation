@@ -33,8 +33,24 @@ export function WeddingWishesSection() {
   return (
     <Section
       id="wishes"
-      className="bg-background"
+      className="relative overflow-hidden bg-[var(--surface)]"
     >
+
+  <img
+  src="/wedding-invitation/images/GalleryBackground.png"
+    alt=""
+    aria-hidden="true"
+    className="
+      pointer-events-none
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      opacity-70
+    "
+  />
+
     <div
       className="absolute inset-0 bg-cover bg-center"
       style={{

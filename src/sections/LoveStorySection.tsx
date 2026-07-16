@@ -105,7 +105,7 @@ export function LoveStorySection() {
                     {story.year}
                   </Paragraph>
 
-                  <Heading className="mt-4 text-4xl">
+                  <Heading className="mt-4 text-2xl">
                     {story.title}
                   </Heading>
 
