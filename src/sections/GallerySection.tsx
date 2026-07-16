@@ -14,6 +14,9 @@ import { GalleryHorizontal } from "lucide-react";
 import { ImageIcon } from "lucide-react";
 import { gallery } from "@/data/gallery";
 
+import Divider1 from "../assets/ornaments/divider-1.png";
+
+
 export function GallerySection() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
@@ -66,13 +69,19 @@ export function GallerySection() {
             Gallery
           </Paragraph>
 
-          <div className="mt-5 mb-8 flex items-center justify-center gap-4">
-            <div className="h-px w-20 bg-[#C9A34E]/40" />
-            <div className="flex h-3 w-3 items-center justify-center rotate-45 border border-[#C9A34E]">
-              <div className="h-1 w-1 bg-[#C9A34E]" />
-            </div>
-            <div className="h-px w-20 bg-[#C9A34E]/40" />
-          </div>
+<img
+    src={Divider1}
+    alt=""
+    aria-hidden="true"
+    className="
+        mx-auto
+        py-4
+        w-48
+        md:w-72
+        lg:w-96
+        object-contain
+    "
+/>
 
           <Heading  className="text-5xl font-medium text-white md:text-6xl">Our Moments</Heading>
 

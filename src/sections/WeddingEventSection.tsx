@@ -19,6 +19,8 @@ import "dayjs/locale/id";
 
 dayjs.locale("id");
 
+import Divider1 from "../assets/ornaments/divider-1.png";
+
 export function WeddingEventSection() {
   return (
     <Section
@@ -67,7 +69,20 @@ export function WeddingEventSection() {
             Wedding Event
           </Paragraph>
 
-          <Divider />
+<img
+    src={Divider1}
+    alt=""
+    aria-hidden="true"
+    className="
+        mx-auto
+        py-4
+        w-48
+        md:w-72
+        lg:w-96
+        object-contain
+    "
+/>
+
 
           <Heading>
             Join Our Celebration

@@ -11,6 +11,9 @@ import {
 
 import { story } from "@/data/story";
 
+import Divider1 from "../assets/ornaments/divider-1.png";
+
+
 export function LoveStorySection() {
   return (
     <Section
@@ -44,7 +47,19 @@ export function LoveStorySection() {
             Our Story
           </Paragraph>
 
-          <Divider />
+<img
+    src={Divider1}
+    alt=""
+    aria-hidden="true"
+    className="
+        mx-auto
+        py-4
+        w-48
+        md:w-72
+        lg:w-96
+        object-contain
+    "
+/>
 
           <Heading>Love Story</Heading>
 

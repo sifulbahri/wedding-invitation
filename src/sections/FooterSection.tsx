@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/Typography";
 
 import { site } from "@/data/site";
+import Divider1 from "../assets/ornaments/divider-1.png";
 
 export function FooterSection() {
   const scrollToTop = () => {
@@ -48,11 +49,23 @@ export function FooterSection() {
           }}
           className="text-center"
         >
-          <Paragraph className="uppercase tracking-[0.4em] text-secondary">
+          <Paragraph className="mx-auto uppercase tracking-[0.4em] text-secondary">
             Thank You
           </Paragraph>
 
-          <Divider />
+<img
+    src={Divider1}
+    alt=""
+    aria-hidden="true"
+    className="
+        mx-auto
+        py-4
+        w-48
+        md:w-72
+        lg:w-96
+        object-contain
+    "
+/>
 
           <Heading>
             {site.title}
@@ -67,37 +80,6 @@ export function FooterSection() {
             We look forward to celebrating
             this special day together.
           </Paragraph>
-
-          <div className="mt-10 flex justify-center">
-            <Heart
-              size={36}
-              className="fill-[var(--secondary)] text-[var(--secondary)]"
-            />
-          </div>
-
-          <Paragraph className="mt-10 text-secondary">
-            {site.weddingDate}
-          </Paragraph>
-
-          <div className="mt-12 flex justify-center gap-6">
-            <a
-              href="https://instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-secondary"
-              aria-label="Instagram"
-            >
-              <Instagram size={24} />
-            </a>
-
-            <a
-              href="mailto:example@email.com"
-              className="transition hover:text-secondary"
-              aria-label="Email"
-            >
-              <Mail size={24} />
-            </a>
-          </div>
 
           <Button
             className="mt-12"

@@ -10,6 +10,10 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
+
+import Divider1 from "../assets/ornaments/divider-1.png";
+
+
 const GOOGLE_MAPS_URL =
   "https://maps.google.com/";
 
@@ -55,15 +59,19 @@ export function LocationSection() {
             Location
           </Paragraph>
 
-<div className="my-8 flex items-center justify-center gap-4">
-    <div className="h-px w-24 bg-[#C9A34E]/40" />
-
-    <div className="flex h-3 w-3 rotate-45 items-center justify-center border border-[#C9A34E]">
-        <div className="h-1 w-1 bg-[#D4AF37]" />
-    </div>
-
-    <div className="h-px w-24 bg-[#C9A34E]/40" />
-</div>
+<img
+    src={Divider1}
+    alt=""
+    aria-hidden="true"
+    className="
+        mx-auto
+        py-4
+        w-48
+        md:w-72
+        lg:w-96
+        object-contain
+    "
+/>
 
 
           <Heading>

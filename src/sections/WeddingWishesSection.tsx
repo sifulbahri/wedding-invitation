@@ -11,6 +11,8 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
+import Divider1 from "../assets/ornaments/divider-1.png";
+
 import { wishes } from "@/data/wishes";
 import type { Wish } from "@/types/wish";
 
@@ -52,7 +54,19 @@ export function WeddingWishesSection() {
             Wedding Wishes
           </Paragraph>
 
-          <Divider />
+<img
+    src={Divider1}
+    alt=""
+    aria-hidden="true"
+    className="
+        mx-auto
+        py-4
+        w-48
+        md:w-72
+        lg:w-96
+        object-contain
+    "
+/>
 
           <Heading>Messages & Prayers</Heading>
 

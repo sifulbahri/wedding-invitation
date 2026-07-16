@@ -12,6 +12,8 @@ import {
 
 import { gifts } from "@/data/gifts";
 
+import Divider1 from "../assets/ornaments/divider-1.png";
+
 
 export function WeddingGiftSection() {
   const copyToClipboard = async (text: string) => {
@@ -55,17 +57,19 @@ export function WeddingGiftSection() {
             Wedding Gift
           </Paragraph>
 
-
-            <div className="mt-5 mb-8 flex items-center justify-center gap-4">
-                <div className="h-px w-24 bg-[#C9A34E]/40"/>
-
-                <div className="flex h-3 w-3 items-center justify-center rotate-45 border border-[#C9A34E]">
-                    <div className="h-1 w-1 bg-[#C9A34E]"/>
-                </div>
-
-                <div className="h-px w-24 bg-[#C9A34E]/40"/>
-            </div>
-
+<img
+    src={Divider1}
+    alt=""
+    aria-hidden="true"
+    className="
+        mx-auto
+        py-4
+        w-48
+        md:w-72
+        lg:w-96
+        object-contain
+    "
+/>
 
           <Heading className="text-5xl md:text-6xl">Send Your Blessing</Heading>
 

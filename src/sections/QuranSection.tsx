@@ -10,6 +10,9 @@ import {
 
 import { quran } from "@/data/quran";
 
+import Divider1 from "../assets/ornaments/divider-1.png";
+
+
 export function QuranSection() {
   return (
     <Section
@@ -38,7 +41,19 @@ export function QuranSection() {
             Quran Verse
           </Paragraph>
 
-          <Divider />
+<img
+    src={Divider1}
+    alt=""
+    aria-hidden="true"
+    className="
+        mx-auto
+        py-4
+        w-48
+        md:w-72
+        lg:w-96
+        object-contain
+    "
+/>
 
           <Heading>
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
