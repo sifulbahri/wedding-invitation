@@ -50,13 +50,6 @@ export function WeddingWishesSection() {
       opacity-70
     "
   />
-
-    <div
-      className="absolute inset-0 bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/wedding-invitation/images/hero/background.png')",
-      }}
-    />
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
