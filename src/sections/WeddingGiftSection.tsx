@@ -127,15 +127,16 @@ mt-16 grid gap-8
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 grid grid-cols-[96px_1fr] gap-8">
+                <div className="relative z-10 grid grid-cols-[96px_1fr] gap-1">
 
                   {/* LEFT COLUMN */}
                   <div className="shrink-0">
                     <div
                       className="
+            
                         flex
-                        h-24
-                        w-24
+                        h-18
+                        w-18
                         items-center
                         justify-center
                         rounded-full
@@ -160,9 +161,9 @@ mt-16 grid gap-8
                   </div>
 
                   {/* RIGHT COLUMN */}
-                  <div className="flex-1">
+                  <div className="grow ml-1">
 
-                    <Heading className="text-4xl">
+                    <Heading className="text-xl">
                       {gift.title}
                     </Heading>
 
@@ -181,18 +182,18 @@ mt-16 grid gap-8
                     {/* BANK */}
                     {gift.type === "bank" && (
                       <>
-                        <Paragraph className="mt-3 text-2xl font-semibold tracking-wide text-[#D4AF37]">
+                        <Paragraph className="mt-1 text-2xl font-semibold tracking-wide text-[#D4AF37]">
                           {gift.accountNumber}
                         </Paragraph>
 
                         <Button
                           className="
-                            mt-8
+                            mt-2
                             inline-flex
                             items-center
                             rounded-full
-                            bg-[#D4AF37]
-                            px-8
+                            bg-[#D4AF37] 
+                            px-2 w-fit
                             py-2
                             text-black
                             font-medium

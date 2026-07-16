@@ -59,11 +59,11 @@ export function QuranSection() {
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
           </Heading>
 
-          <p className="font-arabic mt-12 text-3xl leading-loose md:text-4xl">
+          <p className="font-arabic mt-12 text-2xl leading-loose md:text-4xl">
             {quran.arabic}
           </p>
 
-          <Paragraph className="mt-12 text-base leading-9">
+          <Paragraph className="mt-8 text-base leading-9 tracking-tight">
             {quran.translation}
           </Paragraph>
 

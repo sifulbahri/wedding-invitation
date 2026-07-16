@@ -105,11 +105,11 @@ export function LoveStorySection() {
                     {story.year}
                   </Paragraph>
 
-                  <Heading className="mt-4 text-2xl">
+                  <Heading className="mt-4 text-xl tracking-tight">
                     {story.title}
                   </Heading>
 
-                  <Paragraph className="mt-6">
+                  <Paragraph className="mt-4 text-white leading-6 tracking-tight">
                     {story.description}
                   </Paragraph>
                 </div>

@@ -82,12 +82,12 @@ export function FooterSection() {
           </Paragraph>
 
           <Button
-            className="mt-12"
+            className="fixed bottom-6 right-6 flex h-12 w-auto items-center justify-center rounded-full"
             onClick={scrollToTop}
           >
             <ChevronUp
               size={18}
-              className="mr-2"
+              className=""
             />
             Back To Top
           </Button>

@@ -33,7 +33,7 @@ export function WeddingWishesSection() {
   return (
     <Section
       id="wishes"
-      className="relative overflow-hidden bg-[var(--surface)]"
+      className="relative bg-[var(--surface)]"
     >
 
   <img
@@ -124,7 +124,7 @@ export function WeddingWishesSection() {
                   </h3>
                 </div>
 
-                <Paragraph className="mt-6">
+                <Paragraph className="mt-4 text-white leading-6 tracking-tight">
                   "{wish.message}"
                 </Paragraph>
               </motion.article>

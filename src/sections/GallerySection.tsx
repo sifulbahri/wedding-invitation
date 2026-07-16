@@ -192,16 +192,6 @@ export function GallerySection() {
         </AnimatePresence>
       </Container>
 
-      <img
-        src="/wedding-invitation/images/ornaments/leaf-top-left.png"
-        className="absolute left-0 top-0 w-40 opacity-80 pointer-events-none"
-      />
-
-      <img
-        src="/wedding-invitation/images/ornaments/leaf-bottom-right.png"
-        className="absolute bottom-0 right-0 w-40 opacity-80 pointer-events-none"
-      />
-
 
     <div className="mt-10 flex justify-center">
       <button
