@@ -10,7 +10,7 @@ import {
   Paragraph,
 } from "@/components/ui/Typography";
 
-
+import Divider1 from "../assets/ornaments/divider-1.png";
 import { couple } from "@/data/couple";
 
 export function BrideGroomSection() {
@@ -78,11 +78,19 @@ export function BrideGroomSection() {
             </div>
 
 
-          <Divider />
-
-            <Heart size={35} className="mx-auto text-[#D4AF37]" fill="currentColor" />
-
-          <Divider />
+<img
+    src={Divider1}
+    alt=""
+    aria-hidden="true"
+    className="
+        mx-auto
+        py-4
+        w-48
+        md:w-72
+        lg:w-96
+        object-contain
+    "
+/>
 
           <Heading>In the Name of Allah</Heading>
 
