@@ -63,7 +63,7 @@ export function QuranSection() {
             {quran.arabic}
           </p>
 
-          <Paragraph className="mt-8 text-base leading-9 tracking-tight">
+          <Paragraph className="mt-8 text-base leading-tight tracking-tight">
             {quran.translation}
           </Paragraph>
 

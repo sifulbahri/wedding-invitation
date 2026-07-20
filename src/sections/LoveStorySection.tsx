@@ -109,7 +109,7 @@ export function LoveStorySection() {
                     {story.title}
                   </Heading>
 
-                  <Paragraph className="mt-4 text-white leading-6 tracking-tight">
+                  <Paragraph className="mt-5 text-white leading-tight">
                     {story.description}
                   </Paragraph>
                 </div>
