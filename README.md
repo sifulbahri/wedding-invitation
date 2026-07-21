@@ -1,4 +1,4 @@
-# 💍 Siful & Yulianti — Wedding Invitation Website
+# 💍 Siful & UCU Yulianti — Wedding Invitation Website
 
 > **A digital wedding invitation crafted with love, engineered with passion.**
 
